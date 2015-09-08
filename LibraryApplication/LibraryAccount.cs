@@ -7,6 +7,22 @@ using System.Threading.Tasks;
 
 namespace LibraryApplication
 {
+    /// <summary>
+    /// Creating enum for type of Books
+    /// </summary>
+    public enum TypeofBooks
+    {
+        Technical,
+        Fiction,
+        Kids
+    }
+    public enum Section 
+    {
+        Books,
+        Magazines,
+        Videos,
+        Music
+    }
     class LibraryAccount
     {
         /// <summary>
@@ -38,6 +54,8 @@ namespace LibraryApplication
         /// User Address
         /// </summary>
         public string Address { get; set; }
+        public TypeofBooks Books { get; set; }
+        public Section ResourceType { get; set; }
         #endregion
         #region Constructors
         /// <summary>
