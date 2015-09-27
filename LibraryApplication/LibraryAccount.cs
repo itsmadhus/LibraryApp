@@ -23,14 +23,22 @@ namespace LibraryApplication
         Videos,
         Music
     }
-    class LibraryAccount
+    public class LibraryAccount
     {
         /// <summary>
         /// Defines the Library Account for a User.
         /// Allows the User to Checkout and Checkin Books 
         /// </summary>
+              
+
 
         #region Variables
+        ///<summary>
+        ///Variable for  total number of books checked out--CheckedOutBooks
+        ///Variable for total number of books in the library -- TotalBooks
+        ///Variable for last account number created -- lastAccountNumber
+        ///</summary>
+
         private static int lastAccountNumber = 0;
         private int  CheckedOutBooks = 0;
         int TotalBooks = 100;
@@ -56,6 +64,7 @@ namespace LibraryApplication
         public string Address { get; set; }
         public TypeofBooks Books { get; set; }
         public Section ResourceType { get; set; }
+        public string Summary { get; set; }
         #endregion
         #region Constructors
         /// <summary>
@@ -104,6 +113,7 @@ namespace LibraryApplication
         /// out is greater than total number of Books available.
         /// </summary>
         /// <param name="NumberofBooks">Number of Books to be checked out</param>
+        /// <param name="TotalBooks">Total Number of Books in the library</param>
         public void Checkout(int NumberofBooks)
         {
             
