@@ -1,2 +1,3 @@
 c:\users\v-msahoo\documents\visual studio 2013\Projects\LibraryApplication\LibraryApplication\bin\Debug\LibraryApplication.exe.config
 E:\GitHub\Repo\LibraryApplication\bin\Debug\LibraryApplication.exe.config
+C:\Users\info\Documents\Github\LibraryApp\LibraryApplication\bin\Debug\LibraryApplication.exe.config

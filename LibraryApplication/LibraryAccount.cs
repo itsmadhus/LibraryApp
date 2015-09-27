@@ -64,6 +64,7 @@ namespace LibraryApplication
         public string Address { get; set; }
         public TypeofBooks Books { get; set; }
         public Section ResourceType { get; set; }
+        public int CheckedOutCount { get; set; }
         public string Summary { get; set; }
         #endregion
         #region Constructors
@@ -123,7 +124,7 @@ namespace LibraryApplication
             }
 
             TotalBooks = TotalBooks - NumberofBooks;
-
+            CheckedOutCount++;
         }
         #endregion
 

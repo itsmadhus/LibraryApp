@@ -15,7 +15,8 @@ namespace LibraryApplication
             Console.WriteLine("Account Number: {0}, Name: {1},Address: {2}", 
             myAccount.AccountNumber, myAccount.UserName,myAccount.Address);
 
-            
+            LibraryFactory.CreateSummary();
+            Console.WriteLine(LibraryFactory.CheckOutReport);
         }
     }
 }

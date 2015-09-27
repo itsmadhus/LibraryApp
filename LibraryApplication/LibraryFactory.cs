@@ -16,15 +16,17 @@ namespace LibraryApplication
         public static string  Name { get; set; }
         public static string  PhoneNumber { get; set; }
         public static string  Address { get; set; }
-        
-       /// <summary>
-       /// Creates an user library account
-       /// </summary>
-       /// <param name="name">Name of the User</param>
-       /// <param name="phonenumber">User Phone Number</param>
-       /// <param name="address">User Address</param>
-       /// <returns>Account Number</returns>
-       public static LibraryAccount CreateAccount(string name,string phonenumber,string address)
+
+        public static string CheckOutReport { get; set; }
+
+        /// <summary>
+        /// Creates an user library account
+        /// </summary>
+        /// <param name="name">Name of the User</param>
+        /// <param name="phonenumber">User Phone Number</param>
+        /// <param name="address">User Address</param>
+        /// <returns>Account Number</returns>
+        public static LibraryAccount CreateAccount(string name,string phonenumber,string address)
         {
             LibraryAccount account = new LibraryAccount(name);
             account.PhoneNumber = phonenumber;
@@ -36,7 +38,7 @@ namespace LibraryApplication
         {
             foreach(var account in accounts)
             {
-                //account.Summary = string.Format("Total number of Books Checked out :{0}");
+                CheckOutReport += string.Format("Account: {0}, CheckedOutCount: {1}\n", account.AccountNumber, account.CheckedOutCount);
             }
 
         }
